@@ -1,7 +1,7 @@
 const fruitList = document.querySelector("#fruitSection ul");
 const fruitNutrition = document.querySelector("#nutritionSection p");
-const errMsg = document.querySelector("#ErrorMSG p");
-let x = 0;
+const errMsg = document.querySelector("#errorMSG p");
+let totalCal = 0;
 function extractFruit(event) {
   event.preventDefault();
   //addFruit(event.target.fruitInput.value);
@@ -21,8 +21,8 @@ function addFruit(fruit) {
 }
 //add the calories
 function addCalories(cal) {
-  x += cal;
-  fruitNutrition.textContent = `${x} calories`;
+  totalCal += cal;
+  fruitNutrition.textContent = `${totalCal} calories`;
   if (cal) {
     fruitNutrition.classList.add("total");
   }
@@ -49,9 +49,9 @@ function fetchFruitData(fruit) {
     })
     .catch((e) => {
       console.log(e);
-      //works but if you add item then add something that doesnt exist
-      //writes it where the caloes is supposed to be
-      errMsg.textContent = `dat don exist`;
+
+      errMsg.classList.add("errNote");
+      errMsg.textContent = "das da wrong fruit";
     });
 }
 

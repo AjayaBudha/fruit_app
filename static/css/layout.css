@@ -28,3 +28,6 @@ ul {
   position: absolute;
   bottom: 0;
 }
+.errNote {
+  background-color: red;
+}
