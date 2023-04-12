@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"watchify ./index.js -o bundle.js\" \"live-server\"",
+    "dev": "live-server",
+    "dev2": "watchify ./static/js/index.js -o bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
