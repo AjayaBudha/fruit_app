@@ -1,7 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-html {
-  box-sizing: 20;
-}
+@import url("base.css");
+@import url("form.css");
+@import url("layout.css");
